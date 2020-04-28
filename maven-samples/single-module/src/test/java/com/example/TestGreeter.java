@@ -10,31 +10,38 @@ import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class TestGreeter {
 
-  private Greeter greeter;
+    private Greeter greeter;
 
-  @Before
-  public void setup() {
-    greeter = new Greeter();
-  }
-
-  @Test
-  public void greetShouldIncludeTheOneBeingGreeted() {
-    String someone = "World";
-
-    assertThat(greeter.greet(someone), containsString(someone));
-  }
-
-  @Test
-  public void greetShouldIncludeGreetingPhrase() {
-    String someone = "World";
-
-    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
-  }
+    @Before
+    public void setup() {
+        greeter = new Greeter();
+    }
 
     @Test
-  public void greetShouldIncludeGreetingMessage() {
-    String someone = "World, Thanks you making me Happy";
+    public void greetShouldIncludeTheOneBeingGreeted() {
+        String someone = "World";
 
-    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
-  }
+        assertThat(greeter.greet(someone), containsString(someone));
+    }
+
+    @Test
+    public void greetShouldIncludeGreetingPhrase() {
+        String someone = "World";
+
+        assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+    }
+
+    @Test
+    public void greetShouldIncludeGreetingMessage() {
+        String someone = "World, Thanks you making me Happy";
+
+        assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+    }
+
+    @Test
+    public void tarajiyadawla() {
+        String someone = "Taraji ya dawla";
+
+        assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));
+    }
 }
