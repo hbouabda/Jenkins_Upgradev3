@@ -12,5 +12,13 @@ pipeline {
                 }
             }
         }
+		stage('Deploy in QA Environment'){
+            steps{
+                build job: 'deploy_application_QA_env'
+
+            }
+            
+        }
+
     }
 }
